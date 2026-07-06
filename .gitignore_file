@@ -1,0 +1,182 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production
+
+# Backend
+backend/venv/
+backend/env/
+backend/__pycache__/
+backend/*.py[cod]
+backend/*$py.class
+backend/*.so
+backend/.Python
+backend/build/
+backend/develop-eggs/
+backend/dist/
+backend/downloads/
+backend/eggs/
+backend/.eggs/
+backend/lib/
+backend/lib64/
+backend/parts/
+backend/sdist/
+backend/var/
+backend/wheels/
+backend/pip-wheel-metadata/
+backend/share/python-wheels/
+backend/*.egg-info/
+backend/.installed.cfg
+backend/*.egg
+backend/MANIFEST
+backend/.pytest_cache/
+backend/.coverage
+backend/htmlcov/
+backend/.mypy_cache/
+backend/.dmypy.json
+backend/dmypy.json
+backend/.pyre/
+backend/.vscode/
+backend/.idea/
+backend/*.log
+backend/logs/
+backend/.DS_Store
+
+# ML Models (large files - consider using DVC)
+backend/app/ml_models/*.pkl
+backend/app/ml_models/*.joblib
+backend/app/ml_models/*.h5
+backend/app/ml_models/*.pt
+backend/app/ml_models/*.pth
+!backend/app/ml_models/.gitkeep
+
+# Database
+backend/*.db
+backend/*.sqlite
+backend/*.sqlite3
+backend/migrations/
+
+# Frontend
+frontend/node_modules/
+frontend/.npm
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/npm-debug.log
+frontend/yarn-debug.log
+frontend/yarn-error.log
+frontend/dist/
+frontend/build/
+frontend/.vscode/
+frontend/.idea/
+frontend/.eslintcache
+frontend/.DS_Store
+frontend/coverage/
+frontend/.nyc_output/
+frontend/reports/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+desktop.ini
+
+# Docker
+.docker/
+.docker-compose.override.yml
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.hypothesis/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+
+# IDE specific
+.vscode/settings.json
+.vscode/launch.json
+.idea/workspace.xml
+.idea/tasks.xml
+
+# Local certificates/keys
+*.pem
+*.key
+*.crt
+
+# Backup files
+*.sql.backup
+backups/
+*.backup
+
+# Cache
+.cache/
+*.cache
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# CI/CD
+.github/workflows/local-*.yml
+
+# Sensitive data
+secrets/
+.secrets/
+*.secret
+
+# Database dumps (unless they're in migrations)
+*.dump
+*.sql
+
+# Node modules lock (optional, depending on team preference)
+# package-lock.json
+# yarn.lock
+
+# Python compiled files
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE files
+*.iml
+out/
+
+# Misc
+.env.test
+.env.staging
+config.local.json
