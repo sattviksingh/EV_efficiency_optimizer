@@ -1,0 +1,47 @@
+# Core Framework
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+
+# Database
+sqlalchemy
+alembic
+
+# Use SQLite for the MVP.
+# Uncomment the next line only if you later switch to PostgreSQL.
+# psycopg2-binary
+
+# Authentication & Security
+python-jose[cryptography]
+passlib[bcrypt]
+python-multipart
+
+# Data Processing & ML
+numpy
+pandas
+scikit-learn
+scipy
+joblib
+
+# Environment
+python-dotenv
+
+# Logging
+python-json-logger
+
+# Async File Support
+aiofiles
+
+# Testing
+pytest
+pytest-asyncio
+pytest-cov
+httpx
+
+# Development Tools
+black
+flake8
+pylint
+mypy
+isort

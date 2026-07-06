@@ -1,0 +1,132 @@
+# ==========================
+# Environment Variables
+# ==========================
+.env
+.env.local
+.env.*.local
+.env.production
+.env.test
+.env.staging
+
+# ==========================
+# Python
+# ==========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+venv/
+.venv/
+env/
+ENV/
+backend/venv/
+backend/env/
+
+.pytest_cache/
+.mypy_cache/
+.pyre/
+.coverage
+htmlcov/
+.hypothesis/
+
+# ==========================
+# Backend
+# ==========================
+backend/build/
+backend/dist/
+backend/*.egg-info/
+backend/pip-wheel-metadata/
+backend/logs/
+backend/*.log
+
+# SQLite Databases
+backend/*.db
+backend/*.sqlite
+backend/*.sqlite3
+
+# Ignore generated migrations
+backend/migrations/
+
+# Keep ML folder but ignore trained models
+backend/app/ml_models/*.pkl
+backend/app/ml_models/*.joblib
+backend/app/ml_models/*.h5
+backend/app/ml_models/*.pt
+backend/app/ml_models/*.pth
+!backend/app/ml_models/.gitkeep
+
+# ==========================
+# Frontend
+# ==========================
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/coverage/
+frontend/.npm
+frontend/.eslintcache
+
+# Frontend env files
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# ==========================
+# IDE
+# ==========================
+.vscode/
+.idea/
+*.iml
+out/
+
+# ==========================
+# OS Files
+# ==========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================
+# Logs
+# ==========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ==========================
+# Docker
+# ==========================
+.docker/
+docker-compose.override.yml
+
+# ==========================
+# Temporary Files
+# ==========================
+.cache/
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+
+# ==========================
+# Secrets
+# ==========================
+*.pem
+*.key
+*.crt
+secrets/
+.secrets/
+*.secret
+
+# ==========================
+# Backup Files
+# ==========================
+backups/
+*.backup
+*.dump
+*.sql.backup
