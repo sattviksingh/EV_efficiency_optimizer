@@ -2,30 +2,26 @@ function StatCard({ title, value }) {
   return (
     <div
       style={{
-        background: "#ffffff",
-        borderRadius: "16px",
+        background: "white",
         padding: "25px",
-        boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
-        textAlign: "center",
+        borderRadius: "12px",
+        boxShadow: "0 3px 8px rgba(0,0,0,.1)",
+        transition: "0.3s",
       }}
     >
-      <h3
+      <h4
         style={{
-          margin: 0,
-          color: "#64748B",
-          fontSize: "18px",
-          fontWeight: "600",
+          color: "#64748b",
+          marginBottom: "10px",
         }}
       >
         {title}
-      </h3>
+      </h4>
 
       <h1
         style={{
-          marginTop: "18px",
-          color: "#0F172A",
-          fontSize: "36px",
-          fontWeight: "700",
+          margin: 0,
+          color: "#0f172a",
         }}
       >
         {value}

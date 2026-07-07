@@ -1,0 +1,156 @@
+Processing TripA01.csv
+Skipped (invalid energy/distance)
+Processing TripA02.csv
+Skipped (invalid energy/distance)
+Processing TripA03.csv
+Skipped (invalid energy/distance)
+Processing TripA04.csv
+Skipped (invalid energy/distance)
+Processing TripA05.csv
+Skipped (invalid energy/distance)
+Processing TripA06.csv
+Skipped (invalid energy/distance)
+Processing TripA07.csv
+Skipped (invalid energy/distance)
+Processing TripA08.csv
+Skipped (invalid energy/distance)
+Processing TripA09.csv
+Skipped (invalid energy/distance)
+Processing TripA10.csv
+Skipped (invalid energy/distance)
+Processing TripA11.csv
+Skipped (too few rows)
+Processing TripA12.csv
+Skipped (invalid energy/distance)
+Processing TripA13.csv
+Skipped (invalid energy/distance)
+Processing TripA14.csv
+Skipped (invalid energy/distance)
+Processing TripA15.csv
+Skipped (invalid energy/distance)
+Processing TripA16.csv
+Skipped (invalid energy/distance)
+Processing TripA17.csv
+Skipped (invalid energy/distance)
+Processing TripA18.csv
+Skipped (invalid energy/distance)
+Processing TripA19.csv
+Skipped (invalid energy/distance)
+Processing TripA20.csv
+Skipped (invalid energy/distance)
+Processing TripA21.csv
+Skipped (invalid energy/distance)
+Processing TripA22.csv
+Skipped (invalid energy/distance)
+Processing TripA23.csv
+Skipped (invalid energy/distance)
+Processing TripA24.csv
+Skipped (invalid energy/distance)
+Processing TripA25.csv
+Skipped (invalid energy/distance)
+Processing TripA26.csv
+Skipped (invalid energy/distance)
+Processing TripA27.csv
+Skipped (invalid energy/distance)
+Processing TripA28.csv
+Skipped (invalid energy/distance)
+Processing TripA29.csv
+Skipped (invalid energy/distance)
+Processing TripA30.csv
+Skipped (invalid energy/distance)
+Processing TripA31.csv
+Skipped (invalid energy/distance)
+Processing TripA32.csv
+Skipped (invalid energy/distance)
+Processing TripB01.csv
+Skipped (invalid energy/distance)
+Processing TripB02.csv
+Skipped (invalid energy/distance)
+Processing TripB03.csv
+Skipped (invalid energy/distance)
+Processing TripB04.csv
+Processing TripB05.csv
+Skipped (too few rows)
+Processing TripB06.csv
+Skipped (too few rows)
+Processing TripB07.csv
+Skipped (invalid energy/distance)
+Processing TripB08.csv
+Skipped (invalid energy/distance)
+Processing TripB09.csv
+Skipped (invalid energy/distance)
+Processing TripB10.csv
+Skipped (invalid energy/distance)
+Processing TripB11.csv
+Skipped (invalid energy/distance)
+Processing TripB12.csv
+Skipped (invalid energy/distance)
+Processing TripB13.csv
+Skipped (invalid energy/distance)
+Processing TripB14.csv
+Skipped (invalid energy/distance)
+Processing TripB15.csv
+Skipped (invalid energy/distance)
+Processing TripB16.csv
+Skipped (invalid energy/distance)
+Processing TripB17.csv
+Skipped (invalid energy/distance)
+Processing TripB18.csv
+Skipped (invalid energy/distance)
+Processing TripB19.csv
+Skipped (invalid energy/distance)
+Processing TripB20.csv
+Skipped (invalid energy/distance)
+Processing TripB21.csv
+Skipped (invalid energy/distance)
+Processing TripB22.csv
+Skipped (invalid energy/distance)
+Processing TripB23.csv
+Skipped (invalid energy/distance)
+Processing TripB24.csv
+Skipped (invalid energy/distance)
+Processing TripB25.csv
+Skipped (invalid energy/distance)
+Processing TripB26.csv
+Skipped (invalid energy/distance)
+Processing TripB27.csv
+Skipped (invalid energy/distance)
+Processing TripB28.csv
+Skipped (invalid energy/distance)
+Processing TripB29.csv
+Skipped (invalid energy/distance)
+Processing TripB30.csv
+Skipped (invalid energy/distance)
+Processing TripB31.csv
+Skipped (invalid energy/distance)
+Processing TripB32.csv
+Skipped (invalid energy/distance)
+Processing TripB33.csv
+Skipped (invalid energy/distance)
+Processing TripB34.csv
+Skipped (invalid energy/distance)
+Processing TripB35.csv
+Skipped (invalid energy/distance)
+Processing TripB36.csv
+Skipped (invalid energy/distance)
+Processing TripB37.csv
+Skipped (invalid energy/distance)
+Processing TripB38.csv
+Skipped (invalid energy/distance)
+Processing processed_ev_data.csv
+Skipping processed_ev_data.csv
+Missing columns: ['Time [s]', 'Velocity [km/h]', 'Battery Voltage [V]', 'Battery Current [A]', 'SoC [%]', 'Battery Temperature [°C]', 'Ambient Temperature [°C]', 'Throttle [%]', 'Motor Torque [Nm]', 'Elevation [m]', 'Heating Power CAN [kW]', 'AirCon Power [kW]']
+-----------------------------------
+
+===================================
+Dataset Created Successfully
+===================================
+   battery   distance  avg_speed  ...  heating_power  aircon_power  efficiency
+0     45.1  16.594296  20.219822  ...       0.697351      0.008822    2.869215
+
+[1 rows x 14 columns]
+
+Trips Processed : 1
+Dataset Shape   : (1, 14)
+Saved to        : app/datasets/processed_ev_data.csv
+===================================

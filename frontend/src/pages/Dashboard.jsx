@@ -2,34 +2,36 @@ import { useEffect, useState } from "react";
 import api from "../services/api";
 
 import Navbar from "../components/Navbar";
+import Header from "../components/Header";
+
 import StatCard from "../components/StatCard";
+import BatteryGauge from "../components/BatteryGauge";
+import DriverScore from "../components/DriverScore";
+import PredictionPanel from "../components/PredictionPanel";
+
 import EfficiencyChart from "../components/EfficiencyChart";
 import TripTable from "../components/TripTable";
 import TripForm from "../components/TripForm";
-import PredictionCard from "../components/PredictionCard";
 
 function Dashboard() {
   const [stats, setStats] = useState(null);
 
   useEffect(() => {
-    loadDashboard();
+    api
+      .get("/dashboard")
+      .then((res) => setStats(res.data))
+      .catch((err) => console.error(err));
   }, []);
-
-  const loadDashboard = async () => {
-    try {
-      const res = await api.get("/dashboard");
-      setStats(res.data);
-    } catch (err) {
-      console.error(err);
-    }
-  };
 
   if (!stats) {
     return (
       <div
         style={{
-          padding: "40px",
-          fontSize: "24px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+          fontSize: "28px",
           fontWeight: "bold",
         }}
       >
@@ -44,27 +46,21 @@ function Dashboard() {
 
       <div
         style={{
-          background: "#eef3f9",
+          background: "#f1f5f9",
           minHeight: "100vh",
           padding: "30px",
         }}
       >
-        <h1
-          style={{
-            marginBottom: "25px",
-            color: "#1e293b",
-          }}
-        >
-          Dashboard
-        </h1>
+        <Header />
 
-        {/* Statistics */}
+        {/* ================= Stats ================= */}
+
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
+            gridTemplateColumns: "repeat(4,1fr)",
             gap: "20px",
-            marginBottom: "30px",
+            marginTop: "25px",
           }}
         >
           <StatCard
@@ -73,48 +69,61 @@ function Dashboard() {
           />
 
           <StatCard
-            title="🛣 Total Distance"
+            title="📍 Distance"
             value={`${stats.total_distance} km`}
           />
 
           <StatCard
-            title="⚡ Average Speed"
-            value={`${stats.average_speed} km/h`}
+            title="⚡ Avg Efficiency"
+            value={`${stats.average_efficiency}`}
           />
 
           <StatCard
-            title="🔋 Efficiency"
-            value={stats.average_efficiency}
+            title="🏎 Avg Speed"
+            value={`${stats.average_speed} km/h`}
           />
         </div>
 
-        {/* Chart */}
+        {/* ================= AI Cards ================= */}
+
         <div
           style={{
-            marginBottom: "30px",
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr 1fr",
+            gap: "20px",
+            marginTop: "30px",
+          }}
+        >
+          <BatteryGauge battery={82} />
+
+          <DriverScore score={91} />
+
+          <PredictionPanel />
+        </div>
+
+        {/* ================= Chart ================= */}
+
+        <div
+          style={{
+            marginTop: "35px",
           }}
         >
           <EfficiencyChart />
         </div>
 
-        {/* Bottom Layout */}
+        {/* ================= Bottom Section ================= */}
+
         <div
           style={{
             display: "grid",
             gridTemplateColumns: "2fr 1fr",
             gap: "25px",
-            alignItems: "start",
+            marginTop: "35px",
           }}
         >
-          <div>
-            <TripTable />
-          </div>
+          <TripTable />
 
-          <div>
-            <TripForm />
-
-            <PredictionCard />
-          </div>
+          <TripForm />
         </div>
       </div>
     </>

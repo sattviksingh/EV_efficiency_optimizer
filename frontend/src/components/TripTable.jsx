@@ -5,27 +5,28 @@ function TripTable() {
   const [trips, setTrips] = useState([]);
 
   useEffect(() => {
-    api.get("/trips").then((res) => {
-      setTrips(res.data);
-    });
+    api
+      .get("/trips")
+      .then((res) => setTrips(res.data))
+      .catch((err) => console.error(err));
   }, []);
 
   return (
     <div
       style={{
-        marginTop: "30px",
         background: "white",
-        borderRadius: "12px",
         padding: "20px",
-        boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+        borderRadius: "12px",
+        boxShadow: "0 3px 8px rgba(0,0,0,.1)",
       }}
     >
-      <h2>Recent Trips</h2>
+      <h3>🚗 Recent Trips</h3>
 
       <table
         style={{
           width: "100%",
           borderCollapse: "collapse",
+          marginTop: "20px",
         }}
       >
         <thead>
@@ -33,7 +34,6 @@ function TripTable() {
             <th>ID</th>
             <th>Driver</th>
             <th>Distance</th>
-            <th>Battery</th>
             <th>Speed</th>
             <th>Efficiency</th>
           </tr>
@@ -44,8 +44,7 @@ function TripTable() {
             <tr key={trip.id}>
               <td>{trip.id}</td>
               <td>{trip.driver}</td>
-              <td>{trip.distance}</td>
-              <td>{trip.battery}%</td>
+              <td>{trip.distance} km</td>
               <td>{trip.speed} km/h</td>
               <td>{trip.efficiency}</td>
             </tr>

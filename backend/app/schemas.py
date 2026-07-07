@@ -1,26 +1,28 @@
-from datetime import datetime
+from pydantic import BaseModel
 
-from pydantic import BaseModel, ConfigDict
 
+# -----------------------------
+# Trip Schemas
+# -----------------------------
 
 class TripCreate(BaseModel):
     driver: str
-    vehicle_model: str
-    start_battery: float
-    end_battery: float
     distance: float
-    average_speed: float
-    temperature: float
-    traffic_level: str
-    energy_consumed: float
+    battery: float
+    speed: float
+    efficiency: float
 
 
 class TripResponse(TripCreate):
     id: int
-    efficiency_score: float | None
-    created_at: datetime
 
-    model_config = ConfigDict(from_attributes=True)
+    class Config:
+        from_attributes = True
+
+
+# -----------------------------
+# AI Prediction Schema
+# -----------------------------
 
 class PredictionRequest(BaseModel):
     battery: float
@@ -30,8 +32,13 @@ class PredictionRequest(BaseModel):
     traffic: str
 
 
+# -----------------------------
+# AI Prediction Response
+# -----------------------------
+
 class PredictionResponse(BaseModel):
     predicted_range: float
     battery_usage: float
     efficiency_score: float
+    driving_score: int
     recommendation: str
