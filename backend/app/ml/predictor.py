@@ -1,7 +1,15 @@
+from pathlib import Path
+
 import joblib
 import pandas as pd
 
-model = joblib.load("app/ml_models/efficiency_model.pkl")
+
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+MODEL_PATH = BASE_DIR / "ml_models" / "efficiency_model.pkl"
+
+model = joblib.load(MODEL_PATH)
+
 
 
 def predict_efficiency(data):
@@ -13,6 +21,8 @@ def predict_efficiency(data):
         "max_speed": data["speed"],
         "battery_temp": data["temperature"],
         "ambient_temp": data["temperature"],
+
+        # Default values for features not collected
         "avg_voltage": 360,
         "avg_current": 20,
         "avg_throttle": 45,
